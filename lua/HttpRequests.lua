@@ -1,6 +1,6 @@
 curVer = 1.0
 
-PerformHttpRequest("https://raw.githubusercontent.com/ChonkyBadger/BadgerEssentialsv2/main/data.json", function(err, rawData, headers)
+PerformHttpRequest("https://raw.githubusercontent.com/ChonkyBadger/BadgerEssentials-v2/master/data.json", function(err, rawData, headers)
 	local data = json.decode(rawData)
     latestVerAsNum = tonumber(data.version)
     
