@@ -42,7 +42,7 @@ namespace Server
 		{
 			if (priorityStatus == (int)PcStatus.Cooldown && priorityTime > 0)
 			{
-				await Delay(1000);
+				await Delay(60000);
 				priorityTime--;
 				TriggerClientEvent("BadgerEssentials:UpdatePriority", (int)priorityStatus, priorityTime.ToString());
 			}
