@@ -1,4 +1,4 @@
-curVer = 1.0
+curVer = 1.1
 
 PerformHttpRequest("https://raw.githubusercontent.com/ChonkyBadger/BadgerEssentials-v2/master/data.json", function(err, rawData, headers)
 	local data = json.decode(rawData)
