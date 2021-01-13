@@ -1,4 +1,4 @@
 {
-  "version": "1.1",
-   "changelog": "Fixed priority cooldown, was in seconds and is now in mintutes"
+  "version": "2.2",
+   "changelog": "Fixed enabled setting in displays.json not working"
 }
