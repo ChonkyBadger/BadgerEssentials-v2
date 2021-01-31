@@ -1,4 +1,4 @@
 {
-  "version": "2.2",
-   "changelog": "Fixed enabled setting in displays.json not working"
+  "version": "2.3",
+   "changelog": "Fixed /respawn command"
 }
