@@ -46,7 +46,7 @@ namespace Client
 				}
 				else if (deadTimer > 0)
 				{
-					
+
 					TriggerEvent("chat:addMessage", new
 					{
 						color = new[] { 255, 0, 0 },
@@ -106,7 +106,7 @@ namespace Client
 						multiline = true,
 						args = new[] { $"^1[BadgerEssentials] ^3You have been respawned!" }
 					});
-				}			
+				}
 			}
 		}
 

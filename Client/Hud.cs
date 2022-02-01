@@ -105,7 +105,7 @@ namespace Client
 					Screen.ShowNotification("~y~[BadgerEssentials]\n" + "~r~Peacetime is enabled! ~w~You can not attack.");
 				}
 			}
-			
+
 			if (annActive)
 			{
 				Draw2DText("~r~Announcement", 0, 0.5f, 0.175f, 1.2f);
@@ -113,7 +113,7 @@ namespace Client
 
 				for (int i = 1; i <= annLines.Count; i++, baseY += 0.05f)
 				{
-					Draw2DText("~b~" + annLines[i-1], 0, 0.5f, baseY, 1.2f);
+					Draw2DText("~b~" + annLines[i - 1], 0, 0.5f, baseY, 1.2f);
 				}
 			}
 		}
@@ -170,7 +170,7 @@ namespace Client
 			Exports["spawnmanager"].spawnPlayer();
 			Wait(2500);
 			Exports["spawnmanager"].setAutoSpawn(false);
-			
+
 			TriggerServerEvent("BadgerEssentialsServer:GetAOP");
 		}
 
@@ -206,7 +206,7 @@ namespace Client
 				// split message up into multiple lines
 				for (int i = 1; i <= words.Length; i++)
 				{
-					string s = words[i-1];
+					string s = words[i - 1];
 
 					if (!lastLine)
 					{
@@ -226,7 +226,7 @@ namespace Client
 								lastLine = true;
 							}
 						}
-						else 
+						else
 						{
 							line += " ";
 							lineLength++;
@@ -307,13 +307,13 @@ namespace Client
 			SetTextOutline();
 			if (allignment == 0)
 				// Center
-				SetTextJustification(0); 
+				SetTextJustification(0);
 			else if (allignment == 1)
 				// Left
 				SetTextJustification(1);
 			else if (allignment == 2)
 				// Right
-				SetTextJustification(2); 
+				SetTextJustification(2);
 			SetTextEntry("STRING");
 			AddTextComponentString(text);
 			DrawText(position.X, position.Y);
