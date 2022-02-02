@@ -73,7 +73,7 @@ namespace Client
 		private void Respawn(bool bypassTimer)
 		{
 			Ped ped = Game.PlayerPed;
-			Debug.WriteLine("respawn stuck???");
+
 			if (IsEntityDead(ped.Handle))
 			{
 				if (bypassTimer)
@@ -106,6 +106,10 @@ namespace Client
 						multiline = true,
 						args = new[] { $"^1[BadgerEssentials] ^3You have been respawned!" }
 					});
+
+					NetworkResurrectLocalPlayer(ped.Position.X, ped.Position.Y, ped.Position.Z, ped.Heading, true, false);
+					ClearPedBloodDamage(ped.Handle);
+					SetEntityCoords(ped.Handle, respawnLocation.X, respawnLocation.Y, respawnLocation.Z, false, false, false, false);
 				}
 			}
 		}
@@ -135,7 +139,6 @@ namespace Client
 			{
 				await Delay(1000);
 				deadTimer--;
-				Debug.WriteLine("deadTimer--, is now " + deadTimer);
 			}
 		}
 	}
